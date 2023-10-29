@@ -57,3 +57,23 @@ img {
 .label{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 200px;
+}
+
+.form > button{
+  display: block;
+  width: 100px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.form > label {
+  padding: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
