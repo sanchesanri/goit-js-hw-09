@@ -26,7 +26,7 @@ function onBtnStopClick () {
 } 
 
 function setIntervalFn (delay) {
-    return id = setInterval(()=>{
+    return intervalId = setInterval(()=>{
         document.body.style.backgroundColor = getRandomHexColor()
     },delay)
 }
