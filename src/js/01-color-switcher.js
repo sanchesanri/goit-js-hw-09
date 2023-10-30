@@ -1,3 +1,5 @@
+import { setIntervalFn } from "./helpers";
+import { getRandomHexColor } from "./helpers";
 
 const btnStart = document.querySelector('button[data-start]');
 const btnStop = document.querySelector('button[data-stop]');
@@ -12,7 +14,9 @@ function onBtnStartClick () {
     if (intervalId) {
         return
     }
-    intervalId = setIntervalFn(DELAY)
+    
+    intervalId = setIntervalFn(DELAY, getRandomHexColor);
+
     btnStart.disabled = true
     btnStop.disabled = false;
 };
@@ -25,12 +29,12 @@ function onBtnStopClick () {
     
 } 
 
-function setIntervalFn (delay) {
-    return intervalId = setInterval(()=>{
-        document.body.style.backgroundColor = getRandomHexColor()
-    },delay)
-}
+// function setIntervalFn (delay) {
+//     return intervalId = setInterval(()=>{
+//         document.body.style.backgroundColor = getRandomHexColor()
+//     },delay)
+// }
 
-function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
-  }
+// function getRandomHexColor() {
+//     return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
+//   }
